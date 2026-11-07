@@ -1,0 +1,10 @@
+{
+  "path": "/api/experiments",
+  "body": {
+    "name": "Test experiment",
+    "a_visitors": 100,
+    "a_conversions": 10,
+    "b_visitors": 100,
+    "b_conversions": 15
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "app": "experiment-studio",
+  "mode": "experiments",
+  "source": "Michaelhoang8/portfolio-lab",
+  "backend_definitions": {
+    "capabilities": [
+      "experiment_plan"
+    ],
+    "validation": [
+      "ConflictError",
+      "NotFoundError",
+      "ValidationError",
+      "integer",
+      "text"
+    ],
+    "ml_apps": [
+      "number"
+    ],
+    "services": [
+      "_snapshot_rows",
+      "experiment_comparison",
+      "experiment_create",
+      "experiment_summary",
+      "snapshot",
+      "wilson"
+    ],
+    "json_input": [
+      "decode",
+      "read_exact"
+    ],
+    "db": [
+      "SCHEMA",
+      "connect",
+      "initialize",
+      "rows"
+    ]
+  }
+}
