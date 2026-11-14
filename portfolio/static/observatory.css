@@ -151,3 +151,35 @@ body[data-app] .panel .section-head a{color:var(--blue);font-size:12px;text-unde
 
 body[data-app] button.report-export{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:9px 13px;font:600 12px/1.5 Arial,sans-serif}
 body[data-app] button.report-export:hover:not(:disabled){background:var(--bg);border-color:var(--blue)}
+
+/* Experiment analysis desk */
+body[data-app=experiments] main { margin:0 auto; padding:0 4%; max-width:1440px; }
+body[data-app=experiments] header { margin-bottom:28px; flex-wrap:wrap; }
+body[data-app=experiments] #breadcrumb { font:600 23px Arial,sans-serif; letter-spacing:-.6px; }
+body[data-app=experiments] #export { margin-left:auto; }
+body[data-app=experiments] .experiment-layout { grid-template-columns:300px minmax(0,1fr); gap:36px; }
+body[data-app=experiments] #experiment-form { background:transparent; border:0; border-right:1px solid var(--line); border-radius:0; padding:0 28px 0 0; }
+body[data-app=experiments] #experiment-form .two-col { grid-template-columns:1fr 1fr; gap:12px; }
+body[data-app=experiments] #experiment-results .panel { border:0; background:#fff; padding:28px; box-shadow:0 4px 25px #1f426306; }
+.analysis-picker { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+body[data-app=experiments] .analysis-picker select { max-width:75%; margin:0; }
+body[data-app=experiments] .experiment-report h2 { font:500 25px Arial,sans-serif; margin-bottom:24px; }
+.plot-scroll { overflow:auto; }
+.interval-chart { display:block; width:100%; min-width:450px; }
+.interval-chart text { font:12px ui-monospace,monospace; fill:#708399; }
+.plot-grid { stroke:#e5ebf1; }
+.ci-range { stroke-width:4; stroke-linecap:round; }
+.ci-cap { fill:none; stroke-width:1.5; }
+.variant-a .ci-range,.variant-a .ci-cap { stroke:#527fae; }
+.variant-b .ci-range,.variant-b .ci-cap { stroke:#bd8652; }
+.variant-a circle { fill:#527fae; stroke:#fff; stroke-width:2; }
+.variant-b circle { fill:#bd8652; stroke:#fff; stroke-width:2; }
+.plot-caption { font-size:10px; text-align:center; }
+.variant-counts { display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:24px 0; }
+.variant-counts small,.variant-counts span { display:block; font-size:11px; color:#758598; }
+.variant-counts strong { display:block; font:32px ui-monospace,monospace; color:#527fae; margin:8px 0; }
+.variant-counts>div:last-child strong { color:#ad7848; }
+body[data-app=experiments] .result-bottom strong { font:25px ui-monospace,monospace; }
+@media(max-width:800px) { body[data-app=experiments] .experiment-layout { grid-template-columns:1fr; gap:20px; } body[data-app=experiments] #experiment-form { border:0; padding:0; } body[data-app=experiments] #experiment-results .panel { padding:20px; } }
+
+body[data-app=experiments] #experiment-results { min-width:0; }

@@ -1,11 +1,100 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Experiment Studio</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/identities.css"><link rel="stylesheet" href="/observatory.css"><script src="/observatory.js" defer></script><script src="/identities.js" defer></script><script src="/capabilities.js" defer></script><script src="/rest_transport.js" defer></script><script src="/app.js" defer></script></head>
-<body data-app="experiments">
-<aside><a class="brand" href="/">◈ <span>Experiment Studio<small>LOCAL WORKSPACE</small></span></a><div class="nav-label">WORKSPACE</div><div class="aside-bottom"><span class="dot"></span> Local workspace<small>Python + SQLite + JavaScript<br>Your data stays on this machine.</small></div></aside>
-<main><header><span id="breadcrumb">Workspace / Issue Desk</span><button id="export" class="subtle">Export workspace JSON ↗</button></header><div id="notice" role="status" aria-live="polite"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Experiment Studio</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/identities.css" />
+    <link rel="stylesheet" href="/observatory.css" />
+    <script src="/observatory.js" defer></script>
+    <script src="/identities.js" defer></script>
+    <script src="/capabilities.js" defer></script>
+    <script src="/rest_transport.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body data-app="experiments">
+    <main>
+      <header>
+        <span id="breadcrumb">Experiment Studio</span
+        ><button id="export" class="subtle">Export workspace JSON ↗</button>
+      </header>
+      <div id="notice" role="status" aria-live="polite"></div>
 
-
-<section id="experiments" class="page"><div class="heading"><div><div class="eyebrow">03 / INSIGHTS</div><h1>Experiment Studio<span>.</span></h1><p>Turn conversion counts into understandable results.</p></div><span class="pill">95% Wilson intervals</span></div><div class="two-col experiment-layout"><form id="experiment-form" class="panel"><h2>Analyze an experiment</h2><label>Experiment name<input name="name" required maxlength="200" placeholder="Checkout button copy"></label><details><summary>Experiment context · optional</summary><label>Hypothesis<textarea name="hypothesis" maxlength="2000" placeholder="Clearer checkout copy will increase completed purchases."></textarea></label><label>Primary conversion metric<input name="primary_metric" maxlength="200" placeholder="Completed purchases per visitor"></label><p class="help">Record the question and what counts as a conversion. Context does not change the statistical calculation.</p></details><div class="two-col"><label>A visitors<input name="a_visitors" type="number" min="1" max="1000000000" required></label><label>A conversions<input name="a_conversions" type="number" min="0" max="1000000000" required></label><label>B visitors<input name="b_visitors" type="number" min="1" max="1000000000" required></label><label>B conversions<input name="b_conversions" type="number" min="0" max="1000000000" required></label></div><button class="primary">Save analysis</button><p class="help">Compare rates and the difference between them. Assumes independent groups and a fixed stopping point; repeated testing is not corrected.</p></form><div id="experiment-results"></div></div></section>
-<footer>Experiment Studio<span>Independent application · local processing</span></footer></main>
-</body></html>
+      <section id="experiments" class="page">
+        <div class="two-col experiment-layout">
+          <form id="experiment-form" class="panel">
+            <h2>Analyze an experiment</h2>
+            <label
+              >Experiment name<input
+                name="name"
+                required
+                maxlength="200"
+                placeholder="Checkout button copy"
+            /></label>
+            <details>
+              <summary>Experiment context · optional</summary>
+              <label
+                >Hypothesis<textarea
+                  name="hypothesis"
+                  maxlength="2000"
+                  placeholder="Clearer checkout copy will increase completed purchases."
+                ></textarea></label
+              ><label
+                >Primary conversion metric<input
+                  name="primary_metric"
+                  maxlength="200"
+                  placeholder="Completed purchases per visitor"
+              /></label>
+              <p class="help">
+                Record the question and what counts as a conversion. Context
+                does not change the statistical calculation.
+              </p>
+            </details>
+            <div class="two-col">
+              <label
+                >A visitors<input
+                  name="a_visitors"
+                  type="number"
+                  min="1"
+                  max="1000000000"
+                  required /></label
+              ><label
+                >A conversions<input
+                  name="a_conversions"
+                  type="number"
+                  min="0"
+                  max="1000000000"
+                  required /></label
+              ><label
+                >B visitors<input
+                  name="b_visitors"
+                  type="number"
+                  min="1"
+                  max="1000000000"
+                  required /></label
+              ><label
+                >B conversions<input
+                  name="b_conversions"
+                  type="number"
+                  min="0"
+                  max="1000000000"
+                  required
+              /></label>
+            </div>
+            <button class="primary">Save analysis</button>
+            <p class="help">
+              Compare rates and the difference between them. Assumes independent
+              groups and a fixed stopping point; repeated testing is not
+              corrected.
+            </p>
+          </form>
+          <div id="experiment-results"></div>
+        </div>
+      </section>
+      <footer>
+        Experiment Studio<span>95% intervals · fixed-horizon comparison</span>
+      </footer>
+    </main>
+  </body>
+</html>

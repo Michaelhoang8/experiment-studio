@@ -4,6 +4,8 @@ Conversion experiments with uncertainty intervals, hypothesis context, and sampl
 
 ![Experiment Studio preview](docs/app.png)
 
+The analysis desk shows one saved experiment at a time, with a shared-axis Wilson interval plot, conversion counts, and comparison evidence. The plot uses an automatic upper bound displayed on its axis; on narrow screens it scrolls internally. Chart transitions respect both the motion preference and reduced-motion settings.
+
 ## Run
 
 Requires Python 3.11+; no third-party runtime dependencies. Clone this repository and run from its root:
